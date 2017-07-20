@@ -1,1 +1,32 @@
-body {}
+body {
+	background-color: FDFDFD;
+}
+
+.hello {
+	color: pink;
+}
+
+.navbar {
+	list-style-type: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	overflow: hidden;
+	width: 100%;
+
+}
+
+li a {
+	display: block;
+	background-color: pink;
+	text-decoration: none;
+	padding: 14px 16px;
+}
+
+img {
+	width: 420px;
+	height: 300px;
+	opacity: 0.7;
+	
+}
