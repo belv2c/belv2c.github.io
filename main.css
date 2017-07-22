@@ -3,30 +3,55 @@ body {
 }
 
 .hello {
-	color: pink;
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	margin: -39px;
+	padding: 29px;
+	background-color: pink;
+	color: white
+
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: pink;
+	justify-content: flex-end;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	margin: -8px;
+
 }
 
 .navbar {
 	list-style-type: none;
-	text-decoration: none;
-	margin: 0;
-	padding: 0;
-	float: right;
-	overflow: hidden;
-	width: 100%;
-
-}
-
-li a {
-	display: block;
+	margin: -3px;
+	display: inline;
 	background-color: pink;
 	text-decoration: none;
 	padding: 14px 16px;
 }
 
-img {
+
+.displayed {
 	width: 420px;
 	height: 300px;
 	opacity: 0.7;
-	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav a:hover {
+	color:slategray;
+	background-color: white;
+}
+
+nav a:active {
+	top: 5px;
 }
