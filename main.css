@@ -2,6 +2,18 @@ body {
 	background-color: FDFDFD;
 }
 
+nav a {
+	text-decoration: none;
+}
+
+nav a:hover {
+	color:slategray;
+	background-color: white;
+}
+
+nav a:active {
+	font-size: 24px;
+}
 .hello {
 	text-align: center;
 	font-family: 'Playfair Display', serif;
@@ -43,15 +55,50 @@ body {
 	margin-right: auto;
 }
 
-nav a {
-	text-decoration: none;
+/* Blog Styling */
+
+.blog {
+	width: 400px;
+	border: 2px solid slategray;
+	margin: 1%;
 }
 
-nav a:hover {
-	color:slategray;
-	background-color: white;
+.date {
+	max-width:100%;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
 }
 
+.blog-text > * {
+	margin: 0;
+	text-align: center;
+}
+
+.blog-text {
+	padding: 2%;
+	font-family: 'Roboto', sans-serif;
+}
+
+.title {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.blog-text h6 {
+	font-size: 1.5em;
+	padding: 2%;
+}
+
+/* Blog Layout */
+
+#blog-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+=======
 nav a:active {
 	font-size: 24px;
 }
