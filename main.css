@@ -53,5 +53,5 @@ nav a:hover {
 }
 
 nav a:active {
-	top: 5px;
+	font-size: 24px;
 }
