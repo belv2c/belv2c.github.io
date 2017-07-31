@@ -25,7 +25,7 @@ var blog4 = {
 };
 
 var blog5 = {
-	title: "Blog Five"
+	title: "Blog Five",
 	content: "Sleeper shark marlin hussar Shingle Fish snipe eel spiny dogfish shiner driftfish emperor angelfish yellow perch bonefish Bitterling koi scissor-tail rasbora! Yellowfin croaker blue whiting poacher boxfish lumpsucker elver kuhli loach pupfish cownose ray long-finned char greenling thresher shark. Loach goby sarcastic fringehead desert pupfish: snubnose eel round whitefish angler flagblenny Black tetra sixgill ray Black swallower. Tube-snout New Zealand smelt golden loach common tunny morwong; longfin escolar.",
 	date: "July 24, 2017",
 };
