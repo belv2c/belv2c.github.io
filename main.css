@@ -94,11 +94,12 @@ nav a:active {
 
 /* Blog Layout */
 
-#blog-container {
+#blog-holder {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-=======
+}
+
 nav a:active {
 	font-size: 24px;
 }
