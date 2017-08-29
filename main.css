@@ -1,42 +1,27 @@
+/* universal styling */
+
 body {
 	background-color: FDFDFD;
 }
 
+/* navbar */
 nav a {
 	text-decoration: none;
 }
 
 nav a:hover {
-	color:slategray;
+	color: slategray;
 	background-color: white;
+	transition: .3s background-color;
+	color: white;
 }
 
 nav a:active {
 	font-size: 24px;
 }
-.hello {
-	text-align: center;
-	font-family: 'Playfair Display', serif;
-	margin: -39px;
-	padding: 29px;
-	background-color: pink;
-	color: white
-
-}
-
-.container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	background-color: pink;
-	justify-content: flex-end;
-	font-family: 'Roboto', sans-serif;
-	text-decoration: none;
-	margin: -8px;
-
-}
 
 .navbar {
+	display: flex;
 	list-style-type: none;
 	margin: -3px;
 	display: inline;
@@ -45,8 +30,31 @@ nav a:active {
 	padding: 14px 16px;
 }
 
+.nav-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: pink;
+	justify-content: flex-end;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	margin: -8px;
+}
 
-.displayed {
+/* homepage styling */
+
+.hello {
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	margin: -39px;
+	padding: 29px;
+	background-color: pink;
+	color: white
+}
+
+
+
+.main-image {
 	width: 420px;
 	height: 300px;
 	opacity: 0.7;
@@ -102,4 +110,15 @@ nav a:active {
 
 nav a:active {
 	font-size: 24px;
+}
+
+/* Contact Page */
+
+.contact-text {
+	text-align: center;
+}
+
+.contact-div {
+	display: flex;
+	justify-content: center;
 }
