@@ -44,6 +44,23 @@ console.log("All my blogs: ", allBlogs);
 var blogHolder = document.getElementById("blog-holder"); 
 
 // Function building domString
+console.log("All my blogs: ", allBlogs); // Prints to the console
+
+var blogHolder = document.getElementById("blog-holder"); // Creates a variable for blog-holder ID in HTML
+
+for (var i = 0; i < allBlogs.length; i++) { // For Loop - initializes at 0, runs the length of allBlogs array, increments one at a time
+
+	var currentBlog = allBlogs[i];
+	var blogDomString = buildDomString(currentBlog)
+
+	var domString = "";
+
+
+
+		console.log("Dom String from for loop", domString);
+		blogHolder.innerHTML += blogDomString;
+	}
+
 function buildDomString(blog) {
 	var domString = "";
 
@@ -60,6 +77,8 @@ function buildDomString(blog) {
 		return domString;
 }
 // For Loop - initializes at 0, runs the length of allBlogs array, increments one at a time
+
+
 function printBlogArrayToDom(blogArray) {
 	for (var i = 0; i < blogArray.length; i++) {
 
@@ -69,6 +88,7 @@ function printBlogArrayToDom(blogArray) {
 	}
 }
 //Prints out all blog entries to DOM
+
 printBlogArrayToDom(allBlogs);
 
 
