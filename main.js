@@ -9,16 +9,14 @@ function buildDomString (allBlogs) {
 	var domString = '';
 	for (var i = 0; i < allBlogs.length; i++){
 		var currentBlog = allBlogs[i];
-	domString += `<div class="blog-card">`;
+	domString += `<div id=$"{blog.id}" class="blog col-md-3 col-md-offset-1>`;
 	domString +=	`<header class="blog-header">`;
 	domString +=		`<h3 class="blog-title">${currentBlog.title}</h3>`;
+	domString += 		`<h5 class="blog-date">${currentBlog.date}</h5`;
 	domString +=	`</header>`;
 	domString +=	`<section>`;
 	domString += 		`<p class="blog-content">${currentBlog.content}</p>`;	
 	domString +=	`</section>`;
-	domString += 	`<footer>`;
-	domString += 		`<h5 class="blog-date">${currentBlog.date}</h5`;
-	domString +=	`<footer>`;
 	domString +=  `</div>`;
 	}
 	

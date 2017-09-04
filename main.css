@@ -71,10 +71,8 @@ nav a:active {
 	margin: 1%;
 }
 
-.date {
+.blog-date {
 	max-width:100%;
-	border-top: 1px solid gray;
-	border-bottom: 1px solid gray;
 	text-align: center;
 	font-family: 'Roboto', sans-serif;
 }
@@ -89,7 +87,7 @@ nav a:active {
 	font-family: 'Roboto', sans-serif;
 }
 
-.title {
+.blog-title {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
 	text-transform: uppercase;
@@ -100,10 +98,14 @@ nav a:active {
 	padding: 2%;
 }
 
+.blog-content {
+	margin-top: 10px;
+}
+
 /* Blog Layout */
 
 #blog-holder {
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
