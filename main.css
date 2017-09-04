@@ -25,9 +25,7 @@ nav a:active {
 	list-style-type: none;
 	margin: -3px;
 	display: inline;
-	background-color: pink;
 	text-decoration: none;
-	padding: 14px 16px;
 }
 
 .nav-container {
@@ -110,9 +108,7 @@ nav a:active {
 	justify-content: center;
 }
 
-nav a:active {
-	font-size: 24px;
-}
+
 
 /* Contact Page */
 
