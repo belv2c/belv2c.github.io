@@ -26,19 +26,6 @@ function buildDomString (allBlogs) {
 }
 
 
-// For Loop - initializes at 0, runs the length of allBlogs array, increments one at a time
-
-
-/*function printBlogArrayToDom(blogArray) {
-	for (var i = 0; i < blogArray.length; i++) {
-
-		var currentBlog = blogArray[i];
-		var blogDomString = buildDomString(currentBlog);
-		blogHolder.innerHTML += blogDomString;
-	}
-}*/
-
-
 //XHR
 
 function executeThisCodeAfterFileLoads(){
