@@ -2,18 +2,34 @@
 console.log("All my blogs: "); 
 
 // Creates a variable for blog-holder ID in HTML
-var blogHolder = document.getElementById("blog-holder"); 
+let blogHolder = document.getElementById("blog-holder"); 
 
+//XHR
+
+function executeThisCodeAfterFileLoads(){
+	const data = JSON.parse(this.responseText).allBlogs;
+	buildDomString(data);
+}
+
+const executeThisCodeIfFileErrors = () => {
+	console.log("uh no");
+}
+
+let myRequest = new XMLHttpRequest();
+myRequest.addEventListener("load", executeThisCodeAfterFileLoads);
+myRequest.addEventListener("error", executeThisCodeIfFileErrors);
+myRequest.open("GET", "blog-posts.json");
+myRequest.send();
 //Output container
-var counter = 0;
-var outputEl = document.getElementById("jumbo-content");
-for (counter; counter < 5; counter++){
+let counter = 0;
+let outputEl = document.getElementById("jumbo-content");
+/*for (counter; counter < 5; counter++){*/
 
-function buildDomString (allBlogs) {
+const buildDomString = (allBlogs) => {
 	console.log("domstring");
-	var domString = '';
-	for (var i = 0; i < allBlogs.length; i++){
-		var currentBlog = allBlogs[i];
+	let domString = '';
+	for (let i = 0; i < allBlogs.length; i++){
+		let currentBlog = allBlogs[i];
 	domString += `<div class="blogz col-md-3 col-md-offset-1">`;
 	domString +=		`<h3 class="blog-title child">${currentBlog.title}</h3>`;
 	domString += 		`<h5 class="blog-date child">${currentBlog.date}</h5>`;
@@ -22,16 +38,16 @@ function buildDomString (allBlogs) {
 	}
 	blogHolder.innerHTML += domString;
   }
-}
+
 
 //Storing the blog card div into containerEl
-var containerEl = document.getElementsByClassName("blog col-md-3 col-md-offset-1");
+const containerEl = document.getElementsByClassName("blog col-md-3 col-md-offset-1");
 
 //Creates a global variable
-var selectedCard;
+let selectedCard;
 
 //Adding click event to blogHolder element and targeting elements in the blogHolder div
-blogHolder.addEventListener("click", function(event){
+blogHolder.addEventListener("click", (event) => {
 	if (event.target.classList.contains("blogz")){
 		selectedCard = event.target;
 	} else if (event.target.parentNode.classList.contains("blogz")){
@@ -42,29 +58,12 @@ blogHolder.addEventListener("click", function(event){
 })
 
 //
-function newCard() {
+const newCard = () => {
 	outputEl.innerHTML = selectedCard.innerHTML;
 }
 
 
-//XHR
 
-function executeThisCodeAfterFileLoads(){
-	var data = JSON.parse(this.responseText).allBlogs;
-	console.log("Blogs", data);
-	buildDomString(data);
-}
-
-function executeThisCodeIfFileErrors(){
-	console.log("uh no");
-}
-
-
-var myRequest = new XMLHttpRequest();
-myRequest.addEventListener("load", executeThisCodeAfterFileLoads);
-myRequest.addEventListener("error", executeThisCodeIfFileErrors);
-myRequest.open("GET", "blog-posts.json");
-myRequest.send();
 
 
 
