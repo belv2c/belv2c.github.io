@@ -6,7 +6,7 @@ var blogHolder = document.getElementById("blog-holder");
 
 //Output container
 var counter = 0;
-var outputEl = document.getElementById("output-element");
+var outputEl = document.getElementById("jumbo-content");
 for (counter; counter < 5; counter++){
 
 function buildDomString (allBlogs) {
@@ -16,7 +16,7 @@ function buildDomString (allBlogs) {
 		var currentBlog = allBlogs[i];
 	domString += `<div class="blogz col-md-3 col-md-offset-1">`;
 	domString +=		`<h3 class="blog-title child">${currentBlog.title}</h3>`;
-	domString += 		`<h5 class="blog-date child">${currentBlog.date}</h5`;
+	domString += 		`<h5 class="blog-date child">${currentBlog.date}</h5>`;
 	domString += 		`<p class="blog-content child">${currentBlog.content}</p>`;	
 	domString +=  `</div>`;
 	}
@@ -27,20 +27,23 @@ function buildDomString (allBlogs) {
 //Storing the blog card div into containerEl
 var containerEl = document.getElementsByClassName("blog col-md-3 col-md-offset-1");
 
-//Creates a global gariable
+//Creates a global variable
 var selectedCard;
 
+//Adding click event to blogHolder element and targeting elements in the blogHolder div
 blogHolder.addEventListener("click", function(event){
-	if (event.target.parentNode.classList.contains("blogz")){
-		let selectedCard = event.target.parentNode.innerHTML;
-		console.log("HI");
+	if (event.target.classList.contains("blogz")){
+		selectedCard = event.target;
+	} else if (event.target.parentNode.classList.contains("blogz")){
+		selectedCard = event.target.parentNode;
 	}
-	newCard(selectedCard);
+
+	newCard(); //calling newCard function
 })
 
-function newCard(strang) {
-	/*var printSelectedBlog = document.getElementById("output-element");*/
-	/*outputEl.innerHTML = `<p>${blogHolder.value}</p>`;*/
+//
+function newCard() {
+	outputEl.innerHTML = selectedCard.innerHTML;
 }
 
 
