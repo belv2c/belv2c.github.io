@@ -28,17 +28,18 @@ nav a:active {
 	text-decoration: none;
 }
 
-.nav-container {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	background-color: pink;
-	justify-content: flex-end;
-	font-family: 'Roboto', sans-serif;
-	text-decoration: none;
-	margin: -8px;
+/* jumbotron */
+
+.jumbotron p {
+	font-size: 1em;
 }
 
+.jumbotron col-md-12 {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+}
 /* homepage styling */
 
 .hello {
@@ -64,9 +65,11 @@ nav a:active {
 /* Blog Styling */
 
 .blogz {
-	width: 400px;
+	width: 300px;
+	height: 200px;
 	border: 2px solid slategray;
 	margin: 1%;
+	overflow: scroll;
 }
 
 .blog-date {
@@ -104,6 +107,8 @@ nav a:active {
 	display: none;
 }
 
+
+
 /* Blog Layout */
 
 #blog-holder {
@@ -111,7 +116,6 @@ nav a:active {
 	flex-wrap: wrap;
 	justify-content: center;
 }
-
 
 
 /* Contact Page */
