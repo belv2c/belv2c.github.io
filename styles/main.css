@@ -1,131 +1,17 @@
-/* universal styling */
-
 body {
-	background-color: FDFDFD;
-}
+  background-color: #ccdb43; }
 
-/* navbar */
-nav a {
-	text-decoration: none;
-}
-
-nav a:hover {
-	color: slategray;
-	background-color: white;
-	transition: .3s background-color;
-	color: white;
-}
-
-nav a:active {
-	font-size: 24px;
-}
-
-.navbar {
-	display: flex;
-	list-style-type: none;
-	margin: -3px;
-	display: inline;
-	text-decoration: none;
-}
-
-/* jumbotron */
-
-.jumbotron p {
-	font-size: 1em;
-}
-
-.jumbotron col-md-12 {
-	width: 80%;
-	text-align: center;
-	margin: 0 auto;
-	padding: 0;
-}
-/* homepage styling */
-
-.hello {
-	text-align: center;
-	font-family: 'Playfair Display', serif;
-	margin: -39px;
-	padding: 29px;
-	background-color: pink;
-	color: white
-}
-
-
-
-.main-image {
-	width: 420px;
-	height: 300px;
-	opacity: 0.7;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/* Blog Styling */
+img {
+  height: -webkit-fill-available;
+  width: auto; }
 
 .blogz {
-	width: 300px;
-	height: 200px;
-	border: 2px solid slategray;
-	margin: 1%;
-	overflow: scroll;
-}
+  width: 300px;
+  height: 200px;
+  border: 2px solid slategray;
+  margin: 1%;
+  overflow: scroll; }
 
-.blog-date {
-	max-width:100%;
-	text-align: center;
-	font-family: 'Roboto', sans-serif;
-}
-
-.blog-text > * {
-	margin: 0;
-	text-align: center;
-}
-
-.blog-text {
-	padding: 2%;
-	font-family: 'Roboto', sans-serif;
-}
-
-.blog-title {
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
-	text-transform: uppercase;
-}
-
-.blog-text h6 {
-	font-size: 1.5em;
-	padding: 2%;
-}
-
-.blog-content {
-	margin-top: 10px;
-}
-
-.hidden {
-	display: none;
-}
-
-
-
-/* Blog Layout */
-
-#blog-holder {
-	display: inline-flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-
-/* Contact Page */
-
-.contact-text {
-	text-align: center;
-}
-
-.contact-div {
-	display: flex;
-	justify-content: center;
-}
-
+h1 {
+  color: white;
+  text-align: center; }

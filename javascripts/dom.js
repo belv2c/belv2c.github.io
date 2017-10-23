@@ -9,7 +9,7 @@ const buildDomString = (allBlogs) => {
 	for(let i = 0; i < allBlogs.length; i++) {
 		console.log("HI");
 		/*let currentBlog = allBlogs[i];*/
-	domString += `<div class="blogz col-md-3 col-md-offset-1">`;
+	domString += `<div class="blogz col-xs-6 col-xs-offset-3">`;
 	domString +=		`<h3 class="blog-title child">${allBlogs[i].title}</h3>`;
 	domString += 		`<h5 class="blog-date child">${allBlogs[i].date}</h5>`;
 	domString += 		`<p class="blog-content child">${allBlogs[i].content}</p>`;	
