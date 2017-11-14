@@ -1,8 +1,27 @@
 {
-	"allBlogs": [{
+	"projects": [
+	{
+		"id": 0,
+		"title": "Chatty App",
+		"github_url": "https://github.com/nss-evening-cohort-06/chatty-moose-planets",
+		"img": "https://user-images.githubusercontent.com/30091921/30835704-2f04e636-a21f-11e7-8536-c1cad7a057df.gif",
+		"contributors":"Matt Hensley, John Anchor, Caitlin Murnick and Brooke Lewis", 
+		"description": "Chat app made for users to send and receive messages, switch from light to dark theme, edit messages and choose from multiple users."
+	},
+	{
+		"id": 1,
+		"title": "Cat Gif Generator",
+		"github_url": "https://github.com/belv2c/adopt-my-cats",
+		"img": "https://user-images.githubusercontent.com/30091921/31305617-a1098682-ab03-11e7-9c7e-fe6905e1ef03.gif",
+		"description": "An app that calls API data and displays cats based on the number of toes that they have."
+	}
+
+],
+	"allBlogs": [
+	{
 		"id": 0,
 		"title": "JavaScript",
-		"content": "Class on July 24th started out with a lot of JavaScript review from our Treehouse exercises. Lauren went over numbers, strings, objects and booleans. We also discussed uses for and situations in which we would want to use statements vs. compound statements, increments or decrements and Object Property Access such as console.log(). As a class we dove deeper into literals (values that are included directly in the source code). For example, string literals are surrounded by double quotes or single quotes based on personal stylistic preferences. Additionally, we reviewed number and boolean literals that are presented as is (42, true, etc.). We also discussed arrays which are objects that hold any type of values in numerically indexed positions. The concept of arrays starting at index 0 took me some time to fully grasp. After going over the different array syntaxes and their return values (shift, unshift, reverse, sort, slice and splice) I was feeling confident in my overall understanding of JavaScript - until we started For Loops. Combining the concepts of Arrays and For Loops was my first big hurdle in JavaScript. After a lot of in class practice and some group member hangs - it finally came together. ",
+		"content": "Class on July 24th started out with a lot of JavaScript review from our Treehouse exercises. Lauren went over numbers, strings, objects and booleans. We also discussed uses for and situations in which we would want to use statements vs. compound statements, increments or decrements and Object Property Access such as console.log(). As a class we dove deeper into literals (values that are included directly in the source code). For example, string literals are surrounded by double quotes or single quotes based on personal stylistic preferences. Additionally, we reviewed number and boolean literals that are presented as is (42, true, etc.). We also discussed arrays which are objects that hold any type of values in numerically indexed positions. The concept of arrays starting at index 0 took me some time to fully grasp. After going over the different array syntaxes and their return values (shift, unshift, reverse, sort, slice and splice) I was feeling confident in my overall understanding of JavaScript - until we started For Loops. Combining the concepts of Arrays and For Loops was my first big hurdle in JavaScript. After a lot of in class practice and some group member hangs - it finally came together.",
 		"date": "July 24, 2017"
 	},
 	{
@@ -25,9 +44,40 @@
 	},
 	{
 		"id": 4,
-		"title": "Blog Five",
-		"content": "Sleeper shark marlin hussar Shingle Fish snipe eel spiny dogfish shiner driftfish emperor angelfish yellow perch bonefish Bitterling koi scissor-tail rasbora! Yellowfin croaker blue whiting poacher boxfish lumpsucker elver kuhli loach pupfish cownose ray long-finned char greenling thresher shark. Loach goby sarcastic fringehead desert pupfish: snubnose eel round whitefish angler flagblenny Black tetra sixgill ray Black swallower. Tube-snout New Zealand smelt golden loach common tunny morwong; longfin escolar.",
-		"date": "July 24, 2017"
+		"title": "Browserify",
+		"content": "Browserify is great. Separating my javascript files into modules makes it SO much easier to read code. Grunt has been really helpful also. Sometimes I get annoyed with Grunt always bouncing at me but it’s a nifty tool when you’re working with a million curly brackets and semi-colons.",
+		"date": "September 18, 2017"
+	},
+		{
+		"id": 5,
+		"title": "jQuery",
+		"content": "JQuery definitely helps to simplify JavaScript and save time. It’s easy to use and seems to have a pretty large library. I’d like to learn more about minifying the framework. I have been looking forward to not traversing the Dom with vanilla JavaScript anymore so that’s a plus. In retrospective, writing vanilla javascript is much more difficult than JQuery but now I have a pretty solid understanding of what’s going on behind the scenes of the jQuery framework.",
+		"date": "October 7, 2017"
+	},
+	{
+		"id": 6,
+		"title": "Promises",
+		"content": "Currently, we are learning how to use promises. I hope that this will make the asynchronous operations issues easier to deal with. It’s nice to be able to handle errors this way but they are a little difficult to debug.",
+		"date": "October 17, 2017"
+	},
+	{
+		"id": 7,
+		"title": "API's",
+		"content": "I’ve been looking forward to learning about API’s for a while and they are an awesome resource to be able to access open source data. I really enjoy reading through the documentation of API’s in order to see how much you can really do with data. The weather application that we are building has been one of my favorite projects so far. While using Open Weather Map’s API - I discovered Erik Flower’s icon set. I wasn’t very impressed with the icons from OWM’s database and wanted to load in my own without having to write a huge conditional to match every icon id. In the API section of https://erikflowers.github.io/weather-icons/, he already integrated this feature with a lot of the main weather API’s. All I had to do was add some files, link the font and write the logic to loop through the icon id’s.",
+		"date": "October 24, 2017"
+	},
+	{
+		"id": 8,
+		"title": "Firebase",
+		"content": "Firebase seems to be a really cool platform to work with data and/or API’s. I’m not totally sure how I feel about it yet - it’s nice that we can add Google authentication functionality to our pages now and it feels like we are making more usable webpages now. However, it’s a little weird that it doesn’t work with Google Chrome all of the time and I always have to have a second web browser open when I use it. One part of Firebase that I really enjoy is seeing the data update live. ",
+		"date": "October 31, 2017"
+	},
+	{
+		"id": 9,
+		"title": "Group Project",
+		"content": "Our most recent group project required us to re-create Disney’s Magic Kingdom’s website and deploy it through Firebase. This project helped me to get a better grasp on utilizing data. Additionally, I learned a lot about using Moment.js to get a Bootstrap widget time picker to work with our data. Using moment and learning how to format time was a super cool learning experience.",
+		"date": "November 11, 2017"
 	}
+
   ]
 }
