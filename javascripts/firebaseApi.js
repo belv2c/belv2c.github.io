@@ -14,11 +14,11 @@ const getBlogList = () => {
 	let allBlogs = [];
 	return new Promise((resolve, reject) => {
 		$.ajax(`${firebaseKey.databaseURL}/blogs.json`).then((blogs) => {
+			console.log("dese", blogs);
 			if (blogs != null) {
 				Object.keys(blogs).forEach((key) => {
 					blogs[key].id = key;
 					allBlogs.push(blogs[key]);
-					console.log(allBlogs);
 				});
 			}
 			resolve(allBlogs);
@@ -31,20 +31,17 @@ const getBlogList = () => {
 const findAllBlogs = () => {
 	getBlogList().then((results) => {
 		blogArray = results;
-/*		showResults(results);*/
-console.log(results);
+		console.log("DEM", results);
 	}).catch((error) => {
 		console.log("error in getAllBlogs", error);
 	});
 };
 
-/*
-const showResults = (blogs) => {
-
-};*/
-
 const getBlogs = () => {
-	console.log(blogArray);
+	return blogArray;
 };
 
-module.exports = {findAllBlogs, getBlogList, setKey};
+
+
+
+module.exports = {findAllBlogs, getBlogs, setKey};

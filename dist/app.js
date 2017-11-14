@@ -2,12 +2,12 @@
 "use strict";
 
 const firebaseApi = require('./firebaseApi');
-const dom = require('./dom');
+const data = require('./dom');
 
 const apiKeys = () => {
 	return new Promise((resolve, reject) => {
 		$.ajax('./db/apiKeys.json').done((data) => {
-			resolve(data.firebaseKeys);
+			resolve(data.apiKeys);
 		}).fail((error) => {
 			reject(error);
 		});
@@ -16,49 +16,29 @@ const apiKeys = () => {
 
 const retrieveKeys = () => {
 	apiKeys().then((results) => {
-		firebaseApi.setKey(results);
-		firebase.initializeApp(results);
+		firebaseApi.setKey(results.firebaseKeys);
+		firebase.initializeApp(results.firebaseKeys);
+		console.log(results);
 	}).catch((error) => {
 		console.log("error in retrieveKeys", error);
 	});
 };
 
 module.exports = { retrieveKeys };
-},{"./dom":3,"./firebaseApi":5}],2:[function(require,module,exports){
-/*"use strict";
-
-let dom = require('./dom');
-
-let blogEntries = [];
-
-
-$.get("../db/blog-posts.json").done((data) => {
-	let blogEntries = data.allBlogs;
-	dom.buildDomString(blogEntries);
-	}).fail((error) => {
-		console.log("error from blogs", error);
-});
-
-
-const getBlogEntries = () => {
-	return blogEntries;
-};
-
-module.exports = {getBlogEntries};*/
-},{}],3:[function(require,module,exports){
+},{"./dom":2,"./firebaseApi":3}],2:[function(require,module,exports){
 "use strict";
 
 /*let outputEl = document.getElementById("jumbo-content");*/
 
 
-const buildDomString = (allBlogs) => {
+const buildDomString = (blogs) => {
 	let domString = "";
 
-	for(let i = 0; i < allBlogs.length; i++) {
+	for(let i = 0; i < blogs.length; i++) {
 	domString += `<div class="blogz col-xs-6 col-xs-offset-3">`;
-	domString +=		`<h3 class="blog-title child">${allBlogs[i].title}</h3>`;
-	domString += 		`<h5 class="blog-date child">${allBlogs[i].date}</h5>`;
-	domString += 		`<p class="blog-content child">${allBlogs[i].content}</p>`;	
+	domString +=		`<h3 class="blog-title child">${blogs[i].title}</h3>`;
+	domString += 		`<h5 class="blog-date child">${blogs[i].date}</h5>`;
+	domString += 		`<p class="blog-content child">${blogs[i].content}</p>`;	
 	domString +=  `</div>`;
 
   }
@@ -81,9 +61,7 @@ const buildDomString = (allBlogs) => {
 
 
 module.exports = {buildDomString};
-},{}],4:[function(require,module,exports){
-
-},{}],5:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 const dom = require('./dom');
@@ -100,11 +78,11 @@ const getBlogList = () => {
 	let allBlogs = [];
 	return new Promise((resolve, reject) => {
 		$.ajax(`${firebaseKey.databaseURL}/blogs.json`).then((blogs) => {
+			console.log("dese", blogs);
 			if (blogs != null) {
 				Object.keys(blogs).forEach((key) => {
 					blogs[key].id = key;
 					allBlogs.push(blogs[key]);
-					console.log(allBlogs);
 				});
 			}
 			resolve(allBlogs);
@@ -117,33 +95,27 @@ const getBlogList = () => {
 const findAllBlogs = () => {
 	getBlogList().then((results) => {
 		blogArray = results;
-/*		showResults(results);*/
-console.log(results);
+		console.log("DEM", results);
 	}).catch((error) => {
-		console.log("error in findAllBlogs", error);
+		console.log("error in getAllBlogs", error);
 	});
 };
 
-/*
-const showResults = (blogs) => {
-
-};*/
-
 const getBlogs = () => {
-	console.log(blogArray);
+	return blogArray;
 };
 
-module.exports = {findAllBlogs, getBlogList, setKey};
-},{"./dom":3}],6:[function(require,module,exports){
+
+
+
+module.exports = {findAllBlogs, getBlogs, setKey};
+},{"./dom":2}],4:[function(require,module,exports){
 "use strict";
 
-const events = require('./events');
-const blogs = require('./blog.js');
-const dom = require('./dom.js');
+const data = require('./dom.js');
 const apiKeys = require('./apiKeys');
 
 $(document).ready(function(){ 
-	/*events.init();*/
 	apiKeys.retrieveKeys();
 
 });
@@ -153,4 +125,4 @@ $(document).ready(function(){
 
 
 
-},{"./apiKeys":1,"./blog.js":2,"./dom.js":3,"./events":4}]},{},[6]);
+},{"./apiKeys":1,"./dom.js":2}]},{},[4]);
