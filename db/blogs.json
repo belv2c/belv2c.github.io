@@ -17,7 +17,7 @@
 	}
 
 ],
-	"allBlogs": [
+	"blogs": [
 	{
 		"id": 0,
 		"title": "JavaScript",
