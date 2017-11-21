@@ -3,16 +3,14 @@
 /*let outputEl = document.getElementById("jumbo-content");*/
 
 
-const buildDomString = (allBlogs) => {
+const buildDomString = (blogs) => {
 	let domString = "";
 
-	for(let i = 0; i < allBlogs.length; i++) {
-		console.log("HI");
-		/*let currentBlog = allBlogs[i];*/
+	for(let i = 0; i < blogs.length; i++) {
 	domString += `<div class="blogz col-xs-6 col-xs-offset-3">`;
-	domString +=		`<h3 class="blog-title child">${allBlogs[i].title}</h3>`;
-	domString += 		`<h5 class="blog-date child">${allBlogs[i].date}</h5>`;
-	domString += 		`<p class="blog-content child">${allBlogs[i].content}</p>`;	
+	domString +=		`<h3 class="blog-title child">${blogs[i].title}</h3>`;
+	domString += 		`<h5 class="blog-date child">${blogs[i].date}</h5>`;
+	domString += 		`<p class="blog-content child">${blogs[i].content}</p>`;	
 	domString +=  `</div>`;
 
   }
@@ -21,7 +19,7 @@ const buildDomString = (allBlogs) => {
  };
 
  const printToDom = (strang) => {
- 	console.log("hi");
+
  	$("#blog-holder").html(strang);
  };
 

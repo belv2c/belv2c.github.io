@@ -1,40 +1,43 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";
 
-let dom = require('./dom');
+const firebaseApi = require('./firebaseApi');
+const data = require('./dom');
 
-let blogEntries = [];
-
-
-$.get("../db/blog-posts.json").done((data) => {
-	let blogEntries = data.allBlogs;
-	dom.buildDomString(blogEntries);
-	}).fail((error) => {
-		console.log("error from blogs", error);
-});
-
-
-const getBlogEntries = () => {
-	return blogEntries;
+const apiKeys = () => {
+	return new Promise((resolve, reject) => {
+		$.ajax('./db/apiKeys.json').done((data) => {
+			resolve(data.apiKeys);
+		}).fail((error) => {
+			reject(error);
+		});
+	});
 };
 
-module.exports = {getBlogEntries};
-},{"./dom":2}],2:[function(require,module,exports){
+const retrieveKeys = () => {
+	apiKeys().then((results) => {
+		firebaseApi.setKey(results.firebaseKeys);
+		firebase.initializeApp(results.firebaseKeys);
+	}).catch((error) => {
+		console.log("error in retrieveKeys", error);
+	});
+};
+
+module.exports = { retrieveKeys };
+},{"./dom":2,"./firebaseApi":3}],2:[function(require,module,exports){
 "use strict";
 
 /*let outputEl = document.getElementById("jumbo-content");*/
 
 
-const buildDomString = (allBlogs) => {
+const buildDomString = (blogs) => {
 	let domString = "";
 
-	for(let i = 0; i < allBlogs.length; i++) {
-		console.log("HI");
-		/*let currentBlog = allBlogs[i];*/
+	for(let i = 0; i < blogs.length; i++) {
 	domString += `<div class="blogz col-xs-6 col-xs-offset-3">`;
-	domString +=		`<h3 class="blog-title child">${allBlogs[i].title}</h3>`;
-	domString += 		`<h5 class="blog-date child">${allBlogs[i].date}</h5>`;
-	domString += 		`<p class="blog-content child">${allBlogs[i].content}</p>`;	
+	domString +=		`<h3 class="blog-title child">${blogs[i].title}</h3>`;
+	domString += 		`<h5 class="blog-date child">${blogs[i].date}</h5>`;
+	domString += 		`<p class="blog-content child">${blogs[i].content}</p>`;	
 	domString +=  `</div>`;
 
   }
@@ -43,7 +46,7 @@ const buildDomString = (allBlogs) => {
  };
 
  const printToDom = (strang) => {
- 	console.log("hi");
+
  	$("#blog-holder").html(strang);
  };
 
@@ -60,12 +63,63 @@ module.exports = {buildDomString};
 },{}],3:[function(require,module,exports){
 "use strict";
 
-const blogs = require('./blog.js');
-const dom = require('./dom.js');
+const dom = require('./dom');
+let blogArray = [];
+let firebaseKey = '';
+let userUid = '';
+
+const setKey = (key) => {
+	firebaseKey = key;
+	findAllBlogs();
+	console.log("HI", firebaseKey);
+};
+
+const getBlogList = () => {
+	let allBlogs = [];
+	return new Promise((resolve, reject) => {
+		$.ajax(`${firebaseKey.databaseURL}/blogs.json`).then((blogs) => {
+			if (blogs != null) {
+				Object.keys(blogs).forEach((key) => {
+					blogs[key].id = key;
+					allBlogs.push(blogs[key]);
+				});
+			}
+			resolve(allBlogs);
+		}).catch((error) => {
+			reject(error);
+		});
+	});
+};
+
+const findAllBlogs = () => {
+	getBlogList().then((results) => {
+		blogArray = results;
+	}).catch((error) => {
+		console.log("error in getAllBlogs", error);
+	});
+};
+
+const getBlogs = () => {
+	return blogArray;
+};
+
+
+
+
+module.exports = {findAllBlogs, getBlogs, setKey};
+},{"./dom":2}],4:[function(require,module,exports){
+"use strict";
+
+const data = require('./dom.js');
+const apiKeys = require('./apiKeys');
+
+apiKeys.retrieveKeys();
 
 
 
 
 
 
-},{"./blog.js":1,"./dom.js":2}]},{},[3]);
+
+
+},{"./apiKeys":1,"./dom.js":2}]},{},[4]);
