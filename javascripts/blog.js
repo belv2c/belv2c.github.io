@@ -1,4 +1,4 @@
-/*"use strict";
+"use strict";
 
 let dom = require('./dom');
 
@@ -17,4 +17,4 @@ const getBlogEntries = () => {
 	return blogEntries;
 };
 
-module.exports = {getBlogEntries};*/
+module.exports = {getBlogEntries};

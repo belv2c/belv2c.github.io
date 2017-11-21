@@ -18,7 +18,6 @@ const retrieveKeys = () => {
 	apiKeys().then((results) => {
 		firebaseApi.setKey(results.firebaseKeys);
 		firebase.initializeApp(results.firebaseKeys);
-		console.log(results);
 	}).catch((error) => {
 		console.log("error in retrieveKeys", error);
 	});
@@ -72,13 +71,13 @@ let userUid = '';
 const setKey = (key) => {
 	firebaseKey = key;
 	findAllBlogs();
+	console.log("HI", firebaseKey);
 };
 
 const getBlogList = () => {
 	let allBlogs = [];
 	return new Promise((resolve, reject) => {
 		$.ajax(`${firebaseKey.databaseURL}/blogs.json`).then((blogs) => {
-			console.log("dese", blogs);
 			if (blogs != null) {
 				Object.keys(blogs).forEach((key) => {
 					blogs[key].id = key;
@@ -95,7 +94,6 @@ const getBlogList = () => {
 const findAllBlogs = () => {
 	getBlogList().then((results) => {
 		blogArray = results;
-		console.log("DEM", results);
 	}).catch((error) => {
 		console.log("error in getAllBlogs", error);
 	});
@@ -115,10 +113,9 @@ module.exports = {findAllBlogs, getBlogs, setKey};
 const data = require('./dom.js');
 const apiKeys = require('./apiKeys');
 
-$(document).ready(function(){ 
-	apiKeys.retrieveKeys();
+apiKeys.retrieveKeys();
 
-});
+
 
 
 
