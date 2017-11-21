@@ -1,71 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<script src="https://use.fontawesome.com/0f643a1640.js"></script>
 	<link rel="stylesheet" type="text/css" href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./styles/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:100" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<title>Brooke Lewis</title>
 </head>
 <body>
-<!--BOOTSTRAP NAV-->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="index.html"></a>
-    </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutme.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+</head>
+<body ng-app="PersonalApp">
+	<!-- absolute path to the html you want to include, don't forget single quotes inside dbl quotes -->
+	<div ng-include="'./partials/navbar.html'"></div>
+	<div class="index-div" ng-view></div>
 
 
-<div class="hello">
-	<h1>Hello, I'm Brooke Lewis</h1>
-</div>
-
-<img class="main-image col-xs-offset-3" src="images/brooke.jpg" alt="Profile">
-
-<div class="row">
-<div class="work col-xs-6 col-xs-offset-3">
-	<article>
-		<h4>12th South Taproom and Grill | Nashville, TN</h4>
-			<h6>March 2017 - Present</h6>
-				<section>Server</section>
-		</article>
-
-
-	<article>
-		<h4>Jeff Roberts and Associates, PLLC | Nashville, TN</h4>
-			<h6>February 2015 - March 2017</h6>
-				<section>Paralegal</section>
-	</article>
-
-
-
-	<article>
-		<h4>Pizza Bella | Kansas City, MO</h4>
-			<h6>October 2011 - February 2015</h6>
-				<section>Manager and Lead Server</section>
-		</article>
-
-	<article>
-		<h4>Studios Inc | Kansas City, MO</h4>
-			<h6>October 2011 - February 2013</h6>
-				<section>Project Management Internship</section>
-		</article>
-</div>
-</div>
 
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script type="text/javascript" src="./lib/node_modules/animejs/anime.min.js"></script>
 <script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="./dist/app.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-animate/angular-animate.min.js"></script>
+<script type="text/javascript" src="./lib/node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+
+<script type="text/javascript" src="./javascripts/app.js"></script>
+<script type="text/javascript" src="./javascripts/AppConstants.js"></script>
+<script type="text/javascript" src="./javascripts/AppConfig.js"></script>
+
+<script type="text/javascript" src="./javascripts/services/PersonalService.js"></script>
+
+<script type="text/javascript" src="./javascripts/controllers/NavCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/AboutCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/ProjectsCtrl.js"></script>
+<script type="text/javascript" src="./javascripts/controllers/ContactCtrl.js"></script>
+
+
 
 </body>
 </html>
+
+
+
+
+
+
+
+
