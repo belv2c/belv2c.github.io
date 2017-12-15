@@ -13,10 +13,15 @@ app.config(function($routeProvider){
 			templateUrl: 'partials/about.html',
 			controller: 'AboutCtrl'
 		})
-		.when("/contacts/projects", {
+		.when("/projects", {
 			// path to html file and path to javascript file
 			templateUrl: 'partials/projects.html',
 			controller: 'ProjectsCtrl'
+		})
+		.when("/blog", {
+			// path to html file and path to javascript file
+			templateUrl: 'partials/blog.html',
+			controller: 'BlogCtrl'
 		})
 		.when("/contact", {
 			// path to html file and path to javascript file
