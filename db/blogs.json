@@ -77,6 +77,18 @@
 		"title": "Group Project",
 		"content": "Our most recent group project required us to re-create Disney’s Magic Kingdom’s website and deploy it through Firebase. This project helped me to get a better grasp on utilizing data. Additionally, I learned a lot about using Moment.js to get a Bootstrap widget time picker to work with our data. Using moment and learning how to format time was a super cool learning experience.",
 		"date": "November 11, 2017"
+	},
+	{
+		"id": 10,
+		"title": "AngularJS",
+		"content": "As of the last week we have been learning AngularJS and I am finding it to be very useful when it comes to re-using code and organizing modules. Angular has improved my ability to code more efficiently as I am now able to separate the data, logic, and page view into separate files. I can’t wait to dive deeper into the framework and learn more about the AngularJS directives. Also, I created this Angular Gist which has been super helpful since file setup is a bit more complex now: https://gist.github.com/belv2c/f16c3739da0df32845c2ae3383bedbb6.",
+		"date": "November 20, 2017"
+	},
+		{
+		"id": 11,
+		"title": "AngularJS Continued",
+		"content": "This week we created a contact app and I am feeling confident in my understanding of Angular. Currently, we are planning out our capstone projects which is our final assignment of the front-end course. I plan to build a color palette generator and have been planning how I will structure my application and what functionalities I will be including in the MVP version. One thing that I need to get better about is closing tabs in my text editor. Things get pretty complicated when you’re working in multiple files at one time and have 10 tabs open. However, I’m really excited to build my capstone in Angular. After my planning phase, I’d like to research angular page transition animations and incorporate those into my app.",
+		"date": "November 27, 2017"
 	}
 
   ]
