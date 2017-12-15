@@ -39,7 +39,7 @@
 		"title": "Color Pal",
 		"github_url": "https://github.com/belv2c/color-pal",
 		"description": "A color palette generator built with AngularJS that allows users to pick a color from a color wheel and generate corresponding colors."
-	},
+	}
 
 ],
 	"blogs": [

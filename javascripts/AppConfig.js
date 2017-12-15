@@ -16,7 +16,7 @@ app.config(function($routeProvider){
 		.when("/projects", {
 			// path to html file and path to javascript file
 			templateUrl: 'partials/projects.html',
-			controller: 'ProjectsCtrl'
+			controller: 'ProjectCtrl'
 		})
 		.when("/blog", {
 			// path to html file and path to javascript file

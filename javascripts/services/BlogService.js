@@ -1,17 +1,8 @@
 "use strict";
 
-app.service("BlogService", function($http, $rootScope, $q, FIREBASE_CONFIG) {
+app.service("BlogService", function($http, $q, FIREBASE_CONFIG) {
 	
-	const createBlogObject = (blogs) => {
-		 return {
-			"date": blogs.date,
-			"title": blogs.title,
-			"content": blogs.content,
-			"id": blogs.id
-		};
-	};
-
-	const getAllTheBlogs = (userUid) => {
+	const getAllTheBlogs = () => {
 		let blogsArray = [];
 		return $q ((resolve, reject) => {
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/blogs.json`).then((results) => {
@@ -31,6 +22,5 @@ app.service("BlogService", function($http, $rootScope, $q, FIREBASE_CONFIG) {
 	};
 
 
-
-return {getAllTheBlogs, createBlogObject};
+return {getAllTheBlogs};
 });
