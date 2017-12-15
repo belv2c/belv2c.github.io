@@ -13,7 +13,32 @@
 		"title": "Cat Gif Generator",
 		"github_url": "https://github.com/belv2c/adopt-my-cats",
 		"img": "https://user-images.githubusercontent.com/30091921/31305617-a1098682-ab03-11e7-9c7e-fe6905e1ef03.gif",
-		"description": "An app that calls API data and displays cats based on the number of toes that they have."
+		"description": "A cat gif app that calls API data and displays cats based on the number of toes that they have."
+	},
+		{
+		"id": 2,
+		"title": "Contacts App",
+		"github_url": "https://github.com/belv2c/angular-contacts",
+		"description": "Contact app made with AngularJS for users to create and save contact information, add contacts into their favorites and edit their saved contacts."
+	},
+		{
+		"id": 3,
+		"title": "Angular Movie History",
+		"github_url": "https://github.com/belv2c/angular-movie-history",
+		"description": "An app made with AngularJS that utilizes The Movie Database's API. Users are able to search for movies, add to or delete movies from their favorites and rate movies from 1 to 5 stars."
+	},
+		{
+		"id": 4,
+		"title": "Theme Park",
+		"github_url": "https://github.com/nss-evening-cohort-06/theme-park-sentinels",
+		"description": "Interactive map of a theme park including different areas and attractions. Users can interact with different areas of the map.",
+		"contributors":"Ben Harrington, Dre Randaci, Robbie Shock and Brooke Lewis"
+	},
+			{
+		"id": 5,
+		"title": "Color Pal",
+		"github_url": "https://github.com/belv2c/color-pal",
+		"description": "A color palette generator built with AngularJS that allows users to pick a color from a color wheel and generate corresponding colors."
 	}
 
 ],
