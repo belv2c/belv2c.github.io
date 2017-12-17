@@ -14,7 +14,6 @@ app.service("ProjectService", function($http, $q, FIREBASE_CONFIG) {
 			   	  });
 			    }
 					resolve(projectsArray);
-				
 			}).catch((err) => {
 				console.log("error in getAllTheProjects", err);
 			});

@@ -30,12 +30,17 @@ img {
 .item:hover {
   transform: translate(3px, 0px) !important; }
 
-.blogz {
-  width: 300px;
-  height: 200px;
-  border: 2px solid slategray;
-  margin: 1%;
-  overflow: scroll; }
+.thumbnail {
+  width: 29%;
+  margin: 15px;
+  height: 267px;
+  overflow: scroll;
+  word-wrap: break-word; }
+  .thumbnail .date {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: lightgray; }
 
 h1 {
   color: black;
@@ -43,17 +48,6 @@ h1 {
 
 .section-head {
   text-align: center; }
-
-.thumbnail {
-  font-size: 6em;
-  padding: 44px 20px;
-  margin-top: 1px;
-  width: 400px;
-  height: 350px;
-  background-color: #f1c40f;
-  margin-bottom: 20px;
-  color: white;
-  text-decoration: none; }
 
 a:hover {
   text-decoration: none; }
@@ -84,6 +78,11 @@ a:hover {
   -o-transform: rotate(45deg);
   transform: rotate(45deg); }
 
+.navbar {
+  background-color: white;
+  border-bottom: white;
+  color: black; }
+
 .hello {
   font-family: 'Playfair Display', serif; }
 
@@ -96,20 +95,7 @@ a:hover {
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s; }
 
-.ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 4em; }
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden; }
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em; }
+.project-card {
+  height: 200px; }
+  .project-card .fa-github-alt {
+    color: mediumpurple; }

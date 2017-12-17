@@ -7,22 +7,9 @@ h1 {
     text-align: center;
 }
 
-.thumbnail {
-    font-size: 6em;
-    padding: 44px 20px;
-    margin-top: 1px;
-    width: 400px;
-    height: 350px;
-    background-color: #f1c40f;
-    margin-bottom: 20px;
-    color: white;
-    text-decoration: none;
-}
-
 a:hover{
      text-decoration: none;
  }
-
 
 .contact-div {
 	text-align: center;
@@ -54,3 +41,12 @@ a:hover{
             -o-transform: rotate(45deg);
             transform: rotate(45deg);
 	}
+
+
+
+.navbar {
+    background-color: white;
+    border-bottom: white;
+    color: black;
+
+ }

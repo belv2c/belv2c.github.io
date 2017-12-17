@@ -11,4 +11,4 @@ app.constant("FIREBASE_CONFIG", {
   
 });
 
-app.constant("TMDB_CONFIG", '');
+app.constant("FIREBASE_CONFIG", '');
