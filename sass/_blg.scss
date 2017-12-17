@@ -4,12 +4,11 @@
     height: 267px;
     overflow: scroll;
     word-wrap: break-word;
-}
 
-
-.date {
+    .date {
         font-weight: 600;
         display: block;
         margin-bottom: 0.5rem;
-        color: lightgray;
+        color: $light-gray;
+	}
 }

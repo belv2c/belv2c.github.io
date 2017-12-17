@@ -14,7 +14,6 @@ app.service("BlogService", function($http, $q, FIREBASE_CONFIG) {
 			   	  });
 			    }
 					resolve(blogsArray);
-				
 			}).catch((err) => {
 				console.log("error in getAllTheBlogs", err);
 			});

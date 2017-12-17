@@ -36,12 +36,11 @@ img {
   height: 267px;
   overflow: scroll;
   word-wrap: break-word; }
-
-.date {
-  font-weight: 600;
-  display: block;
-  margin-bottom: 0.5rem;
-  color: lightgray; }
+  .thumbnail .date {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: lightgray; }
 
 h1 {
   color: black;
@@ -79,6 +78,11 @@ a:hover {
   -o-transform: rotate(45deg);
   transform: rotate(45deg); }
 
+.navbar {
+  background-color: white;
+  border-bottom: white;
+  color: black; }
+
 .hello {
   font-family: 'Playfair Display', serif; }
 
@@ -90,24 +94,6 @@ a:hover {
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s; }
-
-.ml9 {
-  position: relative;
-  font-weight: 200;
-  font-size: 4em; }
-
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden; }
-
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em; }
 
 .project-card {
   height: 200px; }
