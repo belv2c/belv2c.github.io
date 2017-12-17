@@ -1,7 +1,9 @@
-<div class="col-md-8">
+<div class="container">
    <div class="blogs" ng-repeat="blog in blogs">
-		<h2>{{blog.title}}</h2>
-		<h4>{{blog.date}}</h4>
-		<p>{{blog.content}}</p>
+   		<div class="thumbnail col-md-4">
+			<h2>{{blog.title}}</h2>
+			<span class="date">{{blog.date}}</span>
+			<p>{{blog.content}}</p>
+			</div>
 	</div>
 </div>

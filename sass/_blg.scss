@@ -1,10 +1,15 @@
-.blogz {
-	width: 300px;
-	height: 200px;
-	border: 2px solid slategray;
-	margin: 1%;
-	overflow: scroll;
+.thumbnail {
+	width: 29%;
+    margin: 15px;
+    height: 267px;
+    overflow: scroll;
+    word-wrap: break-word;
 }
 
 
-	
+.date {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+        color: lightgray;
+}
