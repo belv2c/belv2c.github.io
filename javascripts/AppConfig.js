@@ -22,5 +22,6 @@ app.config(function($routeProvider){
 			// path to html file and path to javascript file
 			templateUrl: 'partials/blog.html',
 			controller: 'BlogCtrl'
-		});
+		})
+		.otherwise('/about');
 });
