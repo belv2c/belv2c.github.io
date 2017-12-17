@@ -108,3 +108,8 @@ a:hover {
   transform-origin: 50% 100%;
   display: inline-block;
   line-height: 1em; }
+
+.project-card {
+  height: 200px; }
+  .project-card .fa-github-alt {
+    color: mediumpurple; }

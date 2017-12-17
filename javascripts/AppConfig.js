@@ -22,10 +22,5 @@ app.config(function($routeProvider){
 			// path to html file and path to javascript file
 			templateUrl: 'partials/blog.html',
 			controller: 'BlogCtrl'
-		})
-		.when("/contact", {
-			// path to html file and path to javascript file
-			templateUrl: 'partials/contact.html',
-			controller: 'ContactCtrl'
 		});
 });
