@@ -31,9 +31,8 @@ img {
   transform: translate(3px, 0px) !important; }
 
 .thumbnail {
-  width: 29%;
   margin: 15px;
-  height: 267px;
+  height: 219px;
   overflow: scroll;
   word-wrap: break-word; }
   .thumbnail .date {
@@ -111,12 +110,14 @@ h1 {
 
 h4 {
   text-align: center;
-  margin-top: 45px; }
+  margin-top: 45px;
+  margin-bottom: 24px; }
 
 .contact-div {
   margin-top: 45px; }
 
 .project-card {
-  height: 200px; }
+  height: 200px;
+  text-align: center; }
   .project-card .fa-github-alt {
     color: mediumpurple; }
