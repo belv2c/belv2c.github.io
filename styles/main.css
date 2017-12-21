@@ -6,8 +6,8 @@ img {
   width: auto; }
 
 .main-image {
-  width: 400px;
-  height: 400px;
+  width: 346px;
+  height: 350px;
   overflow: hidden;
   position: relative;
   margin-bottom: 24px;
@@ -83,17 +83,38 @@ a:hover {
   border-bottom: white;
   color: black; }
 
-.hello {
-  font-family: 'Playfair Display', serif; }
+h1 {
+  font-family: objektiv-mk1, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  margin-top: -1px;
+  font-size: 1.7em;
+  text-align: center; }
 
 .brooke-text {
   font-family: 'Inconsolata', monospace;
   font-size: 2em;
-  width: 700px;
-  margin-bottom: 24px;
   -webkit-animation-delay: 0.7s;
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s; }
+
+.about-me {
+  margin-top: -2px;
+  font-size: 1.5em; }
+
+.dev {
+  font-size: 2.5em;
+  margin: 5px;
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: 45px; }
+
+h4 {
+  text-align: center;
+  margin-top: 45px; }
+
+.contact-div {
+  margin-top: 45px; }
 
 .project-card {
   height: 200px; }
