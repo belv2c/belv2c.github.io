@@ -10,8 +10,7 @@ img {
   overflow: hidden;
   position:relative;
   margin-bottom: 24px;
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 
   .item {
     width:100%;
