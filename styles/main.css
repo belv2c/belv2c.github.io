@@ -40,22 +40,20 @@ img {
     margin-bottom: 0.5rem;
     color: lightgray; }
 
-h1 {
-  color: black;
-  text-align: center; }
-
 .section-head {
   text-align: center; }
+
+.about-me-div {
+  margin-top: 100px; }
 
 a:hover {
   text-decoration: none; }
 
 .contact-div {
-  text-align: center;
   margin-bottom: 42px; }
   .contact-div .fa {
     padding: 12px;
-    color: black;
+    color: white;
     font-size: 3em; }
 
 .fa:hover {
@@ -77,9 +75,39 @@ a:hover {
   transform: rotate(45deg); }
 
 .navbar {
-  background-color: white;
-  border-bottom: white;
-  color: black; }
+  background-color: transparent;
+  border-color: black;
+  color: white; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  font-size: 2em;
+  font-size: 1.5em;
+  margin-left: 20px; }
+  .navbar-default .navbar-nav > li > a a:hover {
+    color: white;
+    text-decoration: none; }
+
+a:before, a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -1px;
+  background: #fff; }
+
+a:before {
+  left: 0; }
+
+a:after {
+  right: 0;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); }
+
+a:hover:before {
+  background: #fff;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1); }
 
 h1 {
   font-family: objektiv-mk1, sans-serif;
