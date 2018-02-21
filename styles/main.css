@@ -85,9 +85,8 @@ h1 {
   font-family: objektiv-mk1, sans-serif;
   font-style: normal;
   font-weight: 200;
-  margin-top: -1px;
-  font-size: 1.7em;
-  text-align: center; }
+  font-size: 3em;
+  color: white; }
 
 .brooke-text {
   font-family: 'Inconsolata', monospace;
@@ -96,12 +95,17 @@ h1 {
   -moz-animation-delay: 0.7s;
   animation-delay: 0.7s; }
 
+.say-hi {
+  color: white;
+  font-size: 2em;
+  margin-top: 50px; }
+
 .about-me {
   margin-top: -2px;
   font-size: 1.5em; }
 
 .dev {
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 10px;
   text-align: center; }
 
@@ -116,11 +120,78 @@ h4 {
   margin-top: 45px;
   margin-bottom: 24px; }
 
-.contact-div {
-  margin-top: 45px; }
+#container {
+  margin: 0%; }
 
-.hello {
-  font-size: 5em; }
+#circle {
+  position: inherit;
+  width: 100%;
+  padding-bottom: 20%;
+  overflow: hidden; }
+
+#circle text {
+  font-family: 'Helvetica Neue', Arial;
+  font-size: 16px;
+  font-weight: bold;
+  fill: white;
+  letter-spacing: .2em;
+  word-spacing: 2.2em; }
+
+#circle svg {
+  position: absolute;
+  top: -43px;
+  width: 23%;
+  height: 300px;
+  -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -ms-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(0); } }
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(360deg); }
+  to {
+    -moz-transform: rotate(0); } }
+
+@-ms-keyframes rotate {
+  from {
+    -ms-transform: rotate(360deg); }
+  to {
+    -ms-transform: rotate(0); } }
+
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(360deg); }
+  to {
+    -o-transform: rotate(0); } }
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(0); } }
 
 .project-card {
   height: 200px;
